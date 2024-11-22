@@ -43,15 +43,18 @@ del fb[15]           # Sets the Neopixel at index 15 to (0,0,0,0) or your define
 Other buffer methods
 ```
 fb.fillbuffer((255,255,255))  # Fill the whole buffer with 255,255,255
-fb.clearbuffer()              # Fill the whole buffer with 0,0,0 or your degined "clear colour"
+fb.clearbuffer()              # Fill the whole buffer with 0,0,0 or your defined "clear colour"
 fb.raw(bytearray(...))        # Replace buffer with a whole new byte array
 bytes = fb.dump()             # Copy buffer to another bytearray or function
 ```
 
-Experimental features and brightness controls
+Experimental features and brightness controls - Use at own risk, things ain't great
 ```
 fb = FrameBuffer(PIXEL_WIDTH, PIXEL_HEIGHT, PIXEL_GP, bpp=3, alternating=True, brightness=0.1)                      # Sets global brightness to 10%
 fb = FrameBuffer(PIXEL_WIDTH, PIXEL_HEIGHT, PIXEL_GP, bpp=3, alternating=True, advbrightness=True)                  # Turns on per-pixel brightness control via brightness table.
 fb = FrameBuffer(PIXEL_WIDTH, PIXEL_HEIGHT, PIXEL_GP, bpp=3, alternating=True, brightness=0.5, advbrightness=True)  # Turns on per-pixel brightness and sets the default to 50%
 fb.brightnesstable[11] = 0.25                                                                                       # Set Neopixel at index 11 to 25% brightness
+fb.adjust(1,1,0.1)                                                                                                  # Set Neopixel at 1,1 to 10% brightness (broken)
+fb.adjustall(0.75)                                                                                                  # Set whole buffer per-pixel brightness to 75% (broken)
+fb = FrameBuffer(PIXEL_WIDTH, PIXEL_HEIGHT, PIXEL_GP, bpp=3, alternating=True, clearcolour=(10,10,10))              # Sets the colour for a cleared pixel
 ```
