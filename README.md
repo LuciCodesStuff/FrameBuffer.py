@@ -34,7 +34,7 @@ line, hline, vline, and rect functions
 fb.hline(1,1,4, (0,0,255))              # Horizontal line at 1,1 that is 4 pixels long
 fb.vline(5,5,10, (0,0,255))             # Vertical line at 5,5 that is 10 pixels long
 fb.line(0,1,9,6, (255,0,0))             # Line from 0,1 to 9,6 (Bresenham's Algorithm)
-fb.rect(5,4,4,4, (0,255,0), fill=True)  # Draw a rectangle at 5,4 that is 4x4 and has fill inabled
+fb.rect(5,4,4,4, (0,255,0), fill=True)  # Draw a rectangle at 5,4 that is 4x4 and has fill enabled
 ```
 
 Working outside the buffer
