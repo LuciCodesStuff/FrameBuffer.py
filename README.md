@@ -15,6 +15,7 @@ PIXEL_GP = board.GP28
 PIXEL_WIDTH = 32
 PIXEL_HEIGHT = 8
 fb = FrameBuffer(PIXEL_WIDTH, PIXEL_HEIGHT, PIXEL_GP, bpp=3, alternating=True)
+fb.show()
 ```
 
 Adjust a NeoPixel based on X,Y coords
